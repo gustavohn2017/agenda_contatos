@@ -1,0 +1,71 @@
+body {
+    background-color: #282828;
+    color: #F5F5F5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: #484848;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 360px;
+    box-sizing: border-box;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ... restante do CSS ... */
+
+
+form input[type="text"], form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4da12c;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#lista-contatos {
+    list-style-type: none;
+}
+
+#lista-contatos li {
+    background-color: #484848;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#lista-contatos li h3, #lista-contatos li p {
+    margin: 10px 0;
+}
+
+#lista-contatos li button {
+    background-color: #FFD700;
+    color: #282828;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
