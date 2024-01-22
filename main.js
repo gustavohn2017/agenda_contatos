@@ -1,45 +1,34 @@
-document.getElementById('form-contato').addEventListener('submit', function(event) {
+//Lê as informações do formulário
+
+//lê o botão submit
+const form = document.getElementById("form-contato")
+//Função que previne o reload ao enviar o formulário pelo botão submit
+form.addEventListener('submit', function(event){
+    let formValidado = false;
     event.preventDefault();
 
-    var nome = document.getElementById('nome').value;
-    var telefone = document.getElementById('telefone').value;
-    var email = document.getElementById('email').value;
-    var nota = document.getElementById('nota').value;
+    const nome = document.getElementById("nome");
+    const numero = document.getElementById("numero");
+    const email = document.getElementById("email");
+    const descricao = document.getElementById("descricao");
+    const sucess = alert("contato cadastrado com sucesso!")
 
-    var contatoHTML = '<li>' +
-        '<h3>' + nome + '</h3>' +
-        '<p>Telefone: ' + telefone + '</p>' +
-        '<p>Email: ' + email + '</p>' +
-        '<button onclick="this.nextElementSibling.style.display=\'block\'">Mostrar Nota</button>' +
-        '<p class="nota">' + nota + '</p>' +
-        '<button onclick="editarContato(this)">Editar</button>' +
-        '<button onclick="excluirContato(this)">Excluir</button>' +
-        '</li>';
 
-    document.getElementById('lista-contatos').innerHTML += contatoHTML;
+    formValidado= validaNome(nome.value)
+     if (formValidado){
+        alert(sucess);
+        nome.value = '';
+        numero.value = '';
+        email.value = '';
+        descricao.value = '';
+    } else{
+        alert('nome não está completo.')
+    }
+})
 
-    document.getElementById('nome').value = '';
-    document.getElementById('telefone').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('nota').value = '';
-});
 
-function editarContato(botao) {
-    var li = botao.parentNode;
-    var nome = li.querySelector('h3').textContent;
-    var telefone = li.querySelectorAll('p')[0].textContent.replace('Telefone: ', '');
-    var email = li.querySelectorAll('p')[1].textContent.replace('Email: ', '');
-    var nota = li.querySelector('.nota').textContent;
+function validaNome(nome){
+    const nomeComoArray = nome.split(' ');
 
-    document.getElementById('nome').value = nome;
-    document.getElementById('telefone').value = telefone;
-    document.getElementById('email').value = email;
-    document.getElementById('nota').value = nota;
 
-    li.parentNode.removeChild(li);
-}
-
-function excluirContato(botao) {
-    var li = botao.parentNode;
-    li.parentNode.removeChild(li);
 }

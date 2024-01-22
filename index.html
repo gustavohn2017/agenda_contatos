@@ -7,28 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
+    <h1>Agenda de Contatos</h1>
+    <h2>Criar Contatos</h2>
+    <div class="criarContatos">
+        <form id="form-contatos">
+            <input type="text" required placeholder="nome" id="nome" class="nome">
+            <input type="number" required placeholder="numero" id="numero" class="numero">
+            <input type="e-mail" required placeholder="email" id="email" class="email">
+            <textarea placeholder="descição" id="descricao"></textarea>
+            <button id="btn-depositar" type="submit"> Novo contato </button>
+        </form>
+    </div>
+    <div class="listarContatos">
+        <ul class="contatos" id="contatos">
+        <!-- os contatos devem ser adicionados e listados aqui utilizando JS... como?-->
         
-            <section id="create">
-                <h1>Agenda de Contatos</h1>
-                <form>
-                    <section>
-                        <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="nome"><br>
-                        <label for="telefone">Telefone:</label><br>
-                        <input type="text" id="telefone" name="telefone"><br>
-                        <label for="email">Email:</label><br>
-                        <input type="text" id="email" name="email"><br>
-                        <input type="submit" value="Adicionar Contato">
-                    </form>
-            </section>
-        <h2>Contatos</h2>
-        <div id="contatos">
-            <!-- Contatos serão adicionados aqui -->
-            <input type="submit" value="Alterar contato">
-            <input type="submit" value="Excluir contato">
-        </div>
-        <script src="index.js"></script>
- </body>
+        </ul>
+    </div>
 
+
+    <script src="index.js"></script>
+</body>
 </html>
