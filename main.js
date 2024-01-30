@@ -1,3 +1,9 @@
+function novoContato(){
+    var novoContato= document.getElementById('novoContato');
+    
+}
+
+
 //Lê as informações do formulário
 
 //lê o botão submit
@@ -32,3 +38,16 @@ function validaNome(nome){
 
 
 }
+
+function adicionar() {
+    const nome = document.getElementById("nome").value;
+    const numero = document.getElementById("numero").value;
+    const email = document.getElementById("email").value;
+    const descricao = document.getElementById("descricao").value;
+  
+    const listaContatos = document.getElementById("contatos");
+    const novoContato = document.createElement("li");
+    novoContato.innerHTML = `${nome} - ${numero} - ${email} - ${descricao}`;
+    listaContatos.appendChild(novoContato);
+  }
+  
