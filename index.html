@@ -14,7 +14,7 @@
         <h1>Minha Agenda</h1>
       </div>
     </div>
-    <div class="row my-2 mx-1 py-2 border rounded">
+    <div id="novoContato" class="row my-2 mx-1 py-2 border rounded d-none">
       <div class="col-15">
         <form action="">
           <div class="row">
@@ -35,8 +35,8 @@
                 <label for="nomeContato" class="form-label">E-mail</label>
                 <input type="email" name="nomeContato" id="nomeContato" class="form-control">
             </div>
-            
-            <div class="col-5"><button type="button" class="btn btn-danger w-50">Cancelar</button></div>
+            <!--alterando: <button type="button" class="btn btn-danger w-50" onclick="cancelar()">Cancelar</button>  -->
+            <div class="col-5"><button type="button" class="btn btn-danger w-50" id="buttonCancelar">Cancelar</button></div>
             <div class="col-5"><button type="submit" class="btn btn-primary w-50">Salvar</button></div>
           </div>
         </form>
@@ -49,7 +49,8 @@
         </h2>
       </div>
       <div class="col-auto">
-        <button type="button" class="btn btn-success" onclick="novoContato()">Novo Contato</button>
+        <!--alterando: <button type="button" class="btn btn-success" onclick="mostrarFormContato()">Novo Contato</button>  -->
+        <button type="button" class="btn btn-success" id="buttonNovoContato">Novo Contato</button>
       </div>
     </div>
     <div class="row">
@@ -69,5 +70,6 @@
       </div>
     </div>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>

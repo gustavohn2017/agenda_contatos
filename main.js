@@ -1,7 +1,21 @@
-function novoContato(){
-    var novoContato= document.getElementById('novoContato');
-    
+//Lê os inputs dos botões. Não é recomendável deixar como variáveis globais em projetos mais relevantes.
+var buttonNovoContato = document.getElementById('buttonNovoContato')
+var buttonCancelar = document.getElementById('buttonCancelar')
+var novoContato= document.getElementById('novoContato');
+
+
+
+function mostrarFormContato(){
+    novoContato.classList.remove('d-none');    
 }
+
+function cancelar(){
+    novoContato.classList.add('d-none');    
+}
+
+buttonNovoContato.addEventListener('click', mostrarFormContato)
+buttonCancelar.addEventListener('click', cancelar)
+
 
 
 //Lê as informações do formulário
