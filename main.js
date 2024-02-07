@@ -15,12 +15,22 @@ function cancelar(){
     novoContato.classList.add('d-none');    
 }
 
-buttonNovoContato.addEventListener('click', mostrarFormContato)
+buttonNovoContato.addEventListener('click', mostrarFormContato);
 buttonCancelar.addEventListener('click', cancelar)
 
 
 
-//Lê as informações do formulário
+//Valida o formulário de novo contato
+function validaContato(nomeContato, emailContato, numeroContato){
+    if (nomeContato.trim().length === 0) return false;
+    if (emailContato.trim().length === 0) return false;
+    if (numeroContato.trim().length === 0) return false;
+
+    //adicionar isNaN ao numeroContrato para evitar caracteres não condizentes com o parâmetro.
+
+
+    return true;
+}
 
 //lê o botão submit
 const form = document.getElementById("form-contato")
@@ -34,14 +44,5 @@ function salvarNovoContato(event){
     var sucess = alert("contato cadastrado com sucesso!")
 
 
-    formValidado= validaNome(nome.value)
-     if (formValidado){
-        alert(sucess);
-        inputNomeContato.value = '';
-        inputNumeroContato.value = '';
-        inputEmailContato.value = '';
-        descricao.value = '';
-    } else{
-        alert('nome não está completo.')
-    }
+    
 }
