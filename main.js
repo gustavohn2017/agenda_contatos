@@ -31,6 +31,11 @@ function validaContato(nomeContato, emailContato, numeroContato){
 
     return true;
 }
+//função para validar os forms:
+function novoContatoValido(nomeContato, numeroContato, emailContato){
+
+    return true;
+}
 
 //lê o botão submit
 const form = document.getElementById("form-contato")
@@ -38,10 +43,15 @@ const form = document.getElementById("form-contato")
 function salvarNovoContato(event){
     event.preventDefault();
 
-    var inputNomeContato = inputNomeContato.value;
-    var inputNumeroContato = inputNumeroContato.value;
-    var inputEmailContato =inputEmailContato.value;
-    var sucess = alert("contato cadastrado com sucesso!")
+    var NomeContato = inputNomeContato.value;
+    var NumeroContato = inputNumeroContato.value;
+    var EmailContato =inputEmailContato.value;
+    //var sucess = alert("contato cadastrado com sucesso!")
+    if (novoContatoValido(NomeContato, NumeroContato, EmailContato)){
+        console.log('evento válido!');
+    }else{
+        console.log('evento é inválido');
+    };
 
 
     
