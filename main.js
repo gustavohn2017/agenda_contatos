@@ -33,6 +33,14 @@ function validaContato(nomeContato, emailContato, numeroContato){
 }
 //função para validar os forms:
 function novoContatoValido(nomeContato, numeroContato, emailContato){
+    if (!/@\w+\.\w+/.test(email)) {
+        console.log('Email inválido');
+        return false;
+    }
+    if (!/^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/.test(numero)) {
+        console.log('Número de telefone inválido');
+        return false;
+    }
 
     return true;
 }
